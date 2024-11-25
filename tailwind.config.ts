@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./sanity/**/*.{js, jsx, ts, tsx}",
+    "./sanity/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -20,7 +21,7 @@ export default {
         secondary: "#FBE843",
         black: {
           "100": "#333333",
-          "200": "#141414",
+          "200": "#141413",
           "300": "#7D8087",
           DEFAULT: "#000000",
         },
@@ -34,15 +35,17 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) -2px)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        100: "2px 2px 0px 0px rgb(0,0,0)",
-        200: "2px 2px 0px 2px rgba(0, 0, 0, 0.1)",
-        300: "2px 2px 24px rgba(0, 0, 0, 0.1)",
+        100: "2px 2px 0px 0px rgb(0, 0, 0)",
+        200: "2px 2px 0px 2px rgb(0, 0, 0)",
+        300: "2px 2px 0px 2px rgb(238, 43, 105)",
       },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
+};
+
+export default config;

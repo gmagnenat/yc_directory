@@ -120,7 +120,7 @@
 
   /* searchform */
   .search-form {
-    @apply max-w-3xl w-full min-h-[5rem] bg-white border-[5px] border-black rounded-[80px] text-[1.5rem] mt-8 px-5 flex flex-row items-center gap-5;
+    @apply max-w-3xl w-full min-h-[5rem] bg-white border-[5px] border-black rounded-[80px] text-[1.5rem] mt-8 px-5 flex flex-row items-center gap-5 focus-within:outline focus-within:outline-offset-2 focus-within:outline-4 focus-within:outline-black-200/100;
   }
 
   .search-input {
@@ -128,7 +128,7 @@
   }
 
   .search-btn {
-    @apply size-[3.125rem] rounded-full bg-black flex justify-center items-center !important;
+    @apply size-[3.125rem] rounded-full bg-black flex justify-center items-center focus:outline-offset-4 !important;
   }
 
   /* startupcard */

@@ -12,3 +12,8 @@ export function formatDate(date: string) {
     year: "numeric",
   });
 }
+
+export function formatViews(views: number) {
+  // if views is singular, return view else return views
+  return `view${views === 1 ? "" : "s"}: ${views}`;
+}
